@@ -20,98 +20,29 @@ con.connect(function(err) {
     }
 });
 
-// Students Listener
-app.get("/Students", function(req, res) {
-    con.query('SELECT * FROM student', function (err, rows)  {
-        if (err) {
-            console.log('Error during query');
-        }
-        else {
-            var output = [];
-            for (var i = 0; i < rows.length; i++) {
-                output.push(
-                    {studentid: rows[i].studentid, 
-                    firstName: rows[i].firstName, 
-                    lastName: rows[i].lastName, 
-                    dateofbirth: rows[i].dateofbirth, 
-                    major: rows[i].major} );
-            }
-            console.log(JSON.stringify(output));
-            res.send(JSON.stringify(output));
-        }
-    });
-});
 
 // Courses Listener
-app.get("/Courses", function(req, res) {
-    con.query('SELECT * FROM course', function (err, rows)  {
+app.get("/", function(req, res) {
+
+    var jsondata = req.body;
+    var values = [];
+
+    for(var i = 0; i < jsondata.length; i++)
+    {
+        values.push([jsondata[i].appid,jsondata[i].name]);
+    }
+
+    con.query('INSERT INTO steamListings (appid, name) * VALUES ?', [values], function (err, result)  {
         if (err) {
             console.log('Error during query');
         }
         else {
-            var output = [];
-            for (var i = 0; i < rows.length; i++) {
-                output.push(
-                    {courseid: rows[i].courseid, 
-                    courseDescription: rows[i].courseDescription} );
-            }
-            console.log(JSON.stringify(output));
-            res.send(JSON.stringify(output));
+            console.log(body);
+            res.send(200, 'Inserted those bad boys!');
         }
     });
 });
 
-
-// Grades Listener
-app.get("/Grades", function(req, res) {
-    con.query('SELECT * FROM grades', function (err, rows)  {
-        if (err) {
-            console.log('Error during query');
-        }
-        else {
-            var output = [];
-            for (var i = 0; i < rows.length; i++) {
-                output.push(
-                    {id: rows[i].id, 
-                    courseid: rows[i].courseid, 
-                    studentid: rows[i].studentid, 
-                    term: rows[i].term, 
-                    Grade: rows[i].Grade} );
-            }
-            console.log(JSON.stringify(output));
-            res.send(JSON.stringify(output));
-        }
-    });
-});
-
-// Transcript Listener
-app.get("/Transcript", function(req, res) {
-    var person = req.query.input;
-    person = person.toString();
-    con.query('SELECT student.studentid, firstName, lastName, term, course.courseid, courseDescription, Grade FROM student, course, grades WHERE grades.studentid = student.studentid && grades.courseid = course.courseid && student.firstName = "' + person + '"', (err, rows) => {
-        console.log('We queried.');
-        if (err) {
-            console.log('Error during query');
-        }
-        else {
-            var output = [];
-            for (var i = 0; i < rows.length; i++) {
-                output.push(
-                    {studentid: rows[i].studentid, 
-                    firstName: rows[i].firstName, 
-                    lastName: rows[i].lastName, 
-                    term: rows[i].term, 
-                    courseid: rows[i].courseid,
-                    courseDescription: rows[i].courseDescription,
-                    Grade: rows[i].Grade });
-            }
-        }
-        console.log(JSON.stringify(output));
-        res.send(JSON.stringify(output));
-    
-    });
-
-});
 
 
 app.listen(8080, function(){
