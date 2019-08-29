@@ -20,8 +20,7 @@ con.connect(function(err) {
     }
 });
 
-
-// Courses Listener
+//Request Steam Games JSON Object
 app.get("/", function(req, res) {
 
     var jsondata = req.body;
@@ -31,7 +30,7 @@ app.get("/", function(req, res) {
     {
         values.push([jsondata[i].appid,jsondata[i].name]);
     }
-
+    // Write object into database.
     con.query('INSERT INTO steamListings (appid, name) * VALUES ?', [values], function (err, result)  {
         if (err) {
             console.log('Error during query');
