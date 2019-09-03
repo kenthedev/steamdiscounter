@@ -1,5 +1,40 @@
 <!doctype html>
 <html lang="en">
+
+<style>
+    body, html {
+        background:  url("img/Marble.png");
+        color: black;
+        display: inline;
+    }
+
+    h2, p {
+        color: black;
+        display: inline-block;
+        padding: 0.1rem;
+
+    }
+
+    table, tr, th, thead {
+        color: white;
+        background-color: black;
+        font-size: 15pt;
+        text-align: center;
+    }
+
+    button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+    }
+
+</style>
 <head>
     <!--8C68E25ECA89AADB8CE55AC7003D668B-->
     <meta charset="UTF-8">
@@ -38,13 +73,113 @@
 
 </head>
 
-<body>
+<body style="background-color:rgba(199, 199, 199, 0.986)";>
     <div class="text-center pt-3 pb-3" >
         <h2>Steam Dis-Counter</h2>
         <p class="card-text">Find games on Steam by Genre, Tags, and Discount</p>
     </div>
 
     <hr class="bg-white">
+
+    <div class="container container-sales">
+            <!--This div is for the search bar at the top.-->
+            <div class="sales-section">
+            <div class="pre-table-title" hidden=""></div>
+            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper"><div class="row dataTable_display"><div class="span6"><div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class=""><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="250">250</option><option value="-1">All</option></select> entries</label></div></div><div class="span6"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><table class="table-sales table-hover dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+            <thead>
+            <tr class="text-left" role="row"><th style="width:30px" class="sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="descending" aria-label=": activate to sort column ascending"></th><th style="width:119px" data-orderable="false" class="sorting_disabled" rowspan="1" colspan="1" aria-label=""></th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th>
+                <th style="width:60px" class="sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="%: activate to sort column ascending"><span class="tooltipped tooltipped-n" aria-label="Discount percentage">%</span></th>
+                <th style="width:100px" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label=" Price: activate to sort column ascending">Prices</th>
+                <th style="width:100px" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Started: activate to sort column ascending"><span class="tooltipped tooltipped-nw" aria-label="When was this product discounted">Started</span></th><th style="width:100px" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Release: activate to sort column ascending">Genre</th></tr>
+            </thead>
+            
+            <tbody>
+ 
+            <tr class="app appimg odd" data-appid="738520" data-cache="1567529849" role="row">
+                        <td data-sort="97">
+                            <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/738520/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                            </td>
+                            <td class="applogo">
+                            <a target="_blank" rel="noopener" href="/app/738520/" tabindex="-1" aria-hidden="true">
+                            <img src="https://steamcdn-a.akamaihd.net/steam/apps/738520/capsule_sm_120.jpg?t=1567529849" alt="" decoding="async">
+                            </a>
+                            </td>
+                            <td>
+                            <a target="_blank" rel="noopener" class="b" href="/app/738520/">Breathedge</a>
+                            </td>
+                            <td class="" data-sort="30">-30%</td>
+                            <td data-sort="1399">$13.99</td>
+                            <td data-sort="1567702740" class="timeago">2 days</td>
+                            <td data-sort="1567530008" class="genre">Adventure, Early Access</td>
+                            
+                    </tr>
+
+            <tr class="app appimg odd" data-appid="468920" data-cache="1567514485" role="row">
+                                    <td data-sort="97">
+                                    <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/468920/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                                    </td>
+                                    <td class="applogo">
+                                    <a target="_blank" rel="noopener" href="/app/468920/" tabindex="-1" aria-hidden="true">
+                                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/468920/capsule_sm_120.jpg?t=1567514485" alt="" decoding="async">
+                                    </a>
+                                    </td>
+                                    <td>
+                                    <a target="_blank" rel="noopener" class="b" href="/app/468920/">Ultimate Fishing Simulator</a>
+                                    </td>
+                                    <td class="price-discount-major" data-sort="55">-55%</td>
+                                    <td data-sort="899">$8.99</td>
+                                    <td data-sort="1568397600" class="timeago">10 days</td>
+                                    <td data-sort="1567185004" class="genre">Sports</td>
+                               
+                    </tr>
+
+            <tr class="app appimg odd" data-appid="359550" data-cache="1567533717" role="row">
+                    <td data-sort="96">
+                    <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/359550/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                    </td>
+                    <td class="applogo">
+                    <a target="_blank" rel="noopener" href="/app/359550/" tabindex="-1" aria-hidden="true">
+                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/359550/capsule_sm_120.jpg?t=1567533717" alt="" decoding="async">
+                    </a>
+                    </td>
+                    <td>
+                    <a target="_blank" rel="noopener" class="b" href="/app/359550/">Tom Clancy's Rainbow Six® Siege</a>
+                    </td>
+                    <td class="" data-sort="60">-60%</td>
+                    <td data-sort="799">$7.99</td>
+
+                    <td data-sort="1567616400" class="timeago">22 hours</td>
+                    <td data-sort="1566925827" class="genre">Action</td>
+          
+                    </tr>
+
+            
+
+            
+            
+            </tbody>
+            </table>
+
+            <thead>
+                    <div></div></thead>
+
+            <div class="dataTables_info_container text-center">
+                <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"></div></div>
+            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0">Previous</a></li>
+                <li class="paginate_button active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0">1</a></li>
+                <li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0">2</a></li>
+                <li class="paginate_button disabled" id="DataTables_Table_0_ellipsis"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0">…</a></li><li class="paginate_button "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0">31</a></li>
+                <li class="paginate_button next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="8" tabindex="0">Next</a></li></ul></div></div>
+            </div>
+            
+            <div class="Instructions">
+            <h4>Search for more games...</h4>
+            </div>
+
+        </div>
+        <script nonce="" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" src="/static/js/vendor/jquery.6e722fce1e8553be592b1a741972c7f5.js"></script><script nonce="" integrity="sha512-8aZkvQYpky2Fh/rCMTNiyhCPS6UZObIJyd9YDq2c8+yEW3+8kroy8lKioNBXlaJZ1n+K8WNJnvdMG/iaxLDgXg==" src="/static/js/vendor/jquery.timeago.f1a664bd0629932d8587fac2313362ca.js"></script><script nonce="" integrity="sha512-Qjah19E/CNNfUyzrbtuORzaNzUdcS77ItjI98LR1FqnGBMoN5uGIsf2bLCsARcPUL7NlUHJsUjkNi90E4e9y2A==" src="/static/js/vendor/dataTables.4236a1d7d13f08d35f532ceb6edb8e47.js"></script><script nonce="" integrity="sha512-c1+4aG1sXFXHRR3nnT5g7q/LkEsUKS8DEDHktfEFgC4pNG58RbTwbyCtWbxHlIj3hyN6YGvLbba/WJUC9xSNVw==" src="/static/js/vendor/multipleselect.735fb8686d6c5c55c7451de79d3e60ee.js"></script><script nonce="" integrity="sha512-TVVyPtEw5WgudviWHLVDhxG37EBLCrek/62PjyiydcuBuZfvrBb5zn4/wQMu3gag19D+qLDwP+/8chKVwb26Xg==" src="/static/js/sales.4d55723ed130e5682e76f8961cb54387.js" defer=""></script>
+
 
     <div class="row">
         <div class="text-center w-100">
@@ -57,9 +192,43 @@
                 <option value="">e</option>
             </select>
         </div>
-
-        
-        
+    </div>
+    <div>
+        <table id="QueryResults", align = "center", border-collapse: "collapse", cellpadding="1", cellspacing="0">
+        <tr>
+            <td width="85" >
+                Foo
+            </td>
+            <td width="80" >
+                Foo1
+            </td>
+            <td width="65" >
+                Foo2
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bar1
+            </td>
+            <td>
+                Bar2
+            </td>
+            <td>
+                Bar3
+            </td>
+        </tr>
+        <tr >
+            <td>
+                Bar1
+            </td>
+            <td>
+                Bar2
+            </td>
+            <td>
+                Bar3
+            </td>
+        </tr>
+        </table>
     </div>
 
     <hr class="bg-white">
@@ -68,7 +237,7 @@
     <div class="footer-container">
         <div class="card-footer text-muted" style="text-align: center">
         <button onclick=getData()>
-            words
+            Search
         </button>
     </div>
     </div>
