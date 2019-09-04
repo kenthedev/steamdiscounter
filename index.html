@@ -60,8 +60,26 @@
                 dataType: "json",
                 timeout: 20000, //Used for error handling
                 success: function(data) { //Function on successful AJAX request 
+                    $("#Output").html(""); //Puts response message in open HTML div element
+                },
+                error: function (xhr, ajaxOptions, thrownError) { //Function on AJAX error
+                    alert(thrownError);
+                    $("#Output").html("Error fetching " + URL);
+                }
+            });
+        }
+
+        function getData2 () { //Function for table type selection 
+            var URL = "https://store.steampowered.com/api/appdetails?appids=218620";
+            $.ajax({
+                type: "GET",
+                url: URL,
+                data: "{}",
+                dataType: "jsonp",
+                timeout: 20000, //Used for error handling
+                success: function(data) { //Function on successful AJAX request 
                     alert(data);
-                    $("#Output").html(data); //Puts response message in open HTML div element
+                    $("#Output").html(""); //Puts response message in open HTML div element
                 },
                 error: function (xhr, ajaxOptions, thrownError) { //Function on AJAX error
                     alert(thrownError);
@@ -97,67 +115,186 @@
             <tbody>
  
             <tr class="app appimg odd" data-appid="738520" data-cache="1567529849" role="row">
-                        <td data-sort="97">
-                            <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/738520/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
-                            </td>
-                            <td class="applogo">
-                            <a target="_blank" rel="noopener" href="/app/738520/" tabindex="-1" aria-hidden="true">
-                            <img src="https://steamcdn-a.akamaihd.net/steam/apps/738520/capsule_sm_120.jpg?t=1567529849" alt="" decoding="async">
-                            </a>
-                            </td>
-                            <td>
-                            <a target="_blank" rel="noopener" class="b" href="/app/738520/">Breathedge</a>
-                            </td>
-                            <td class="" data-sort="30">-30%</td>
-                            <td data-sort="1399">$13.99</td>
-                            <td data-sort="1567702740" class="timeago">2 days</td>
-                            <td data-sort="1567530008" class="genre">Adventure, Early Access</td>
-                            
-                    </tr>
+                <td data-sort="97">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/738520/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/738520/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/738520/capsule_sm_120.jpg?t=1567529849" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/738520/">Breathedge</a>
+                </td>
+                <td class="" data-sort="30">-30%</td>
+                <td data-sort="1399">$13.99</td>
+                <td data-sort="1567702740" class="timeago">2 days</td>
+                <td data-sort="1567530008" class="genre">Adventure, Early Access</td>            
+            </tr>
 
             <tr class="app appimg odd" data-appid="468920" data-cache="1567514485" role="row">
-                                    <td data-sort="97">
-                                    <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/468920/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
-                                    </td>
-                                    <td class="applogo">
-                                    <a target="_blank" rel="noopener" href="/app/468920/" tabindex="-1" aria-hidden="true">
-                                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/468920/capsule_sm_120.jpg?t=1567514485" alt="" decoding="async">
-                                    </a>
-                                    </td>
-                                    <td>
-                                    <a target="_blank" rel="noopener" class="b" href="/app/468920/">Ultimate Fishing Simulator</a>
-                                    </td>
-                                    <td class="price-discount-major" data-sort="55">-55%</td>
-                                    <td data-sort="899">$8.99</td>
-                                    <td data-sort="1568397600" class="timeago">10 days</td>
-                                    <td data-sort="1567185004" class="genre">Sports</td>
-                               
-                    </tr>
+                <td data-sort="97">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/468920/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/468920/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/468920/capsule_sm_120.jpg?t=1567514485" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/468920/">Ultimate Fishing Simulator</a>
+                </td>
+                <td class="" data-sort="55">-55%</td>
+                <td data-sort="899">$8.99</td>
+                <td data-sort="1568397600" class="timeago">10 days</td>
+                <td data-sort="1567185004" class="genre">Sports</td>                   
+            </tr>
 
             <tr class="app appimg odd" data-appid="359550" data-cache="1567533717" role="row">
-                    <td data-sort="96">
-                    <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/359550/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
-                    </td>
-                    <td class="applogo">
-                    <a target="_blank" rel="noopener" href="/app/359550/" tabindex="-1" aria-hidden="true">
-                    <img src="https://steamcdn-a.akamaihd.net/steam/apps/359550/capsule_sm_120.jpg?t=1567533717" alt="" decoding="async">
-                    </a>
-                    </td>
-                    <td>
-                    <a target="_blank" rel="noopener" class="b" href="/app/359550/">Tom Clancy's Rainbow Six® Siege</a>
-                    </td>
-                    <td class="" data-sort="60">-60%</td>
-                    <td data-sort="799">$7.99</td>
+                <td data-sort="96">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/359550/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/359550/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/359550/capsule_sm_120.jpg?t=1567533717" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/359550/">Tom Clancy's Rainbow Six® Siege</a>
+                </td>
+                <td class="" data-sort="60">-60%</td>
+                <td data-sort="799">$7.99</td>
+                <td data-sort="1567616400" class="timeago">22 hours</td>
+                <td data-sort="1566925827" class="genre">Action</td>
+            </tr>
 
-                    <td data-sort="1567616400" class="timeago">22 hours</td>
-                    <td data-sort="1566925827" class="genre">Action</td>
-          
-                    </tr>
+            <tr class="app appimg even" data-appid="213670" data-cache="1567533717" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/213670/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/213670/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/213670/capsule_sm_120.jpg?t=1567533717" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/213670/">South Park™: The Stick of Truth™</a>
+                </td>
+                <td class="" data-sort="80">-80%</td>
+                <td data-sort="599">$5.99</td>
+                <td data-sort="1568138400" class="timeago">7 days</td>
+                <td data-sort="1393891200" class="genre">RPG, Action</td>
+            </tr>
 
-            
+            <tr class="app appimg even" data-appid="8870" data-cache="1567553205" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/8870/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/8870/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/8870/capsule_sm_120.jpg?t=1567553205" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/8870/">BioShock Infinite</a>
+                </td>
+                <td class="price-discount" data-sort="75">-75%</td>
+                <td data-sort="749">$7.49</td>
+                <td data-sort="1568656800" class="timeago">13 days</td>
+                <td data-sort="1364256000" class="genre">RPG, Action</td>
+            </tr>
 
-            
-            
+            <tr class="package appimg odd" data-subid="40402" data-cache="1567443634" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/sub/40402/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/sub/40402/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/subs/40402/capsule_sm_120.jpg?t=1567443634" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/sub/40402/">Bioshock Infinite + Season Pass</a>
+                </td>
+                <td class="" data-sort="70">-70%</td>
+                <td data-sort="1499">$14.99</td>
+                <td data-sort="1568656800" class="timeago">13 days</td>
+                <td data-sort="1567447397" class="genre">RPG, Action, DLC</td>
+            </tr>
+
+            <tr class="package appimg even" data-subid="127633" data-cache="1567443634" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/sub/127633/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/sub/127633/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/subs/127633/capsule_sm_120.jpg?t=1567443634" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/sub/127633/">BioShock: The Collection</a>
+                </td>
+                <td class="" data-sort="75">-75%</td>
+                <td data-sort="1499">$14.99</td>
+                <td data-sort="1568656800" class="timeago">13 days</td>
+                <td data-sort="1567447347" class="genre">RPG, Action</td>
+            </tr>
+
+            <tr class="app appimg even" data-appid="1111450" data-cache="1567533717" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/1111450/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/1111450/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/1111450/capsule_sm_120.jpg?t=1567533717" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/1111450/">Youth Feather</a>
+                </td>
+                <td class="" data-sort="35">-35%</td>
+                <td data-sort="194">$1.94</td>
+                <td data-sort="1567702842" class="timeago">1 day</td>
+                <td data-sort="1567131004" class="genre">Visual Novel</td>
+            </tr>
+        
+            <tr class="app appimg even" data-appid="492720" data-cache="1567549653" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/492720/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/492720/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/492720/capsule_sm_120.jpg?t=1567549653" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/492720/">Tropico 6</a>
+                <span class="category sales-kalypso-media">Kalypso Media</span>
+                </td>
+                <td class="" data-sort="30">-30%</td>
+                <td data-sort="3499">$34.99</td>
+                <td data-sort="1568052000" class="timeago">6 days</td>
+                <td data-sort="1567530746" class="genre">Strategy</td>
+            </tr>
+
+            <tr class="app appimg odd" data-appid="675260" data-cache="1565976174" role="row">
+                <td data-sort="30">
+                <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/675260/?curator_clanid=4777282&amp;utm_source=SteamDB" class="info-icon" title="Store"></a>
+                </td>
+                <td class="applogo">
+                <a target="_blank" rel="noopener" href="/app/675260/" tabindex="-1" aria-hidden="true">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/675260/capsule_sm_120.jpg?t=1565976174" alt="" decoding="async">
+                </a>
+                </td>
+                <td>
+                <a target="_blank" rel="noopener" class="b" href="/app/675260/">Batman: The Enemy Within - The Telltale Series</a>
+                </td>
+                <td class="" data-sort="50">-50%</td>
+                <td data-sort="749">$7.49</td>
+                <td data-sort="1568138400" class="timeago">7 days</td>
+                <td data-sort="1567498208" class="genre">Adventure, Action</td>
+            </tr>
+
             </tbody>
             </table>
 
@@ -185,11 +322,12 @@
         <div class="text-center w-100">
             <b><p style="font-size: 150%">Select Wanted Genres</p></b>    
             <select class="w-25" id="genre">
-                <option value="">a</option>
-                <option value="">b</option>
-                <option value="">c</option>
-                <option value="">d</option>
-                <option value="">e</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="rpg">RPG</option>
+                <option value="mmo">MMO</option>
+                <option value="visualNovel">Visual Novel</option>
+                <option value="sport">Sports</option>
             </select>
         </div>
     </div>
@@ -236,7 +374,7 @@
     <div class="" id="Output"></div>
     <div class="footer-container">
         <div class="card-footer text-muted" style="text-align: center">
-        <button onclick=getData()>
+        <button onclick=getData2()>
             Search
         </button>
     </div>

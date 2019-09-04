@@ -29,26 +29,45 @@ app.listen(8080,function(){ //Sets server port
     console.log("Server open on port 8080");
 });
 
-var appToData;
-var apps = steam.getAppList();
-apps.then((data) => {
-    for (var i = 0; i < data.length; i++) {
-        addToData = "INSERT INTO allgames (appId, name) VALUES (";
-        addToData += data[i].appid.toString() + ", \"" + data[i].name.toString() + "\");";
-        //console.log(addToData);
-        con.query(addToData, function (err, result) {
-            if (err) {
-                console.log("Error: " + err);
-            }
-            else {
-            }
+function GetAllGames() {
+    var addToData;
+    var apps = steam.getAppList();
+    apps.then((data) => {
+        for (var i = 0; i < data.length; i++) {
+            addToData = "INSERT INTO allgames (appId, name) VALUES (";
+            addToData += data[i].appid.toString() + ", \"" + data[i].name.toString() + "\");";
+            //console.log(addToData);
+            con.query(addToData, function (err, result) {
+                if (err) {
+                    console.log("Error: " + err);
+                }
+                else {
+                }
+            });
+        
+        }
+    });
+}
+
+function GetDetails () {
+    var array = [];
+    con.query("SELECT * FROM allgames LIMIT 200", function(err,rows,fields) {
+        for (var j = 0; j < rows.length; j++) {
+            array.push(rows[j].appId);
+        }
+        var bigOOF = array[0];
+        var gg = steam.getGameDetails(bigOOF);
+        gg.then((oof) => {
+            var foo = oof.genres;
+            console.log(foo);
         });
-    
-    }
-});
+    });
+}
+
 app.get("/data", function (req, res) {
+    //GetAllGames();
+    GetDetails();
     
-    res.status(200).send(JSON.stringify(appList));
 });
 
 app.get("/genre", function (req, res) { //All Student Information
