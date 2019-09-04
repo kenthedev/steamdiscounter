@@ -65,8 +65,8 @@ function GetDetails () {
 }
 
 app.get("/data", function (req, res) {
-    //GetAllGames();
-    GetDetails();
+    GetAllGames();
+    //GetDetails();
     
 });
 
